@@ -164,18 +164,18 @@
 <!-- SuperSimpleSlider -->
 <script type="text/javascript" >
 sAutoplayDelay = 4000;
-sArrowLeftUrl = 'img/arrows/arrow_left_white.png'; // image url for left arrow
-sArrowRightUrl = 'img/arrows/arrow_right_white.png'; // image url for right arrow
+sArrowLeftUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_left_white.png'; // image url for left arrow
+sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.png'; // image url for right arrow
 </script>
 
     <hr class="featurette-divider">
     <p class="h1" style="text-align: center;">achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
 <div class="simpleSlider" id="sNr1" style="height: 300px;">
-<img src="img/sampleImg1.jpg" alt="sample image 1" />
-<img src="img/sampleImg2.jpg" alt="sample image 2" />
-<img src="img/sampleImg3.jpg" alt="sample image 3" />
-<img src="img/sampleImg4.jpg" alt="sample image 4" />
+<img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" />
+<img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" alt="sample image 2" />
+<img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" alt="sample image 3" />
+<img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" alt="sample image 4" />
 </div>
 <!-- /SuperSimpleSlider -->
 

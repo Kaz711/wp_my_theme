@@ -1,3 +1,5 @@
+ <?php wp_head(); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,7 +13,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="/wp-content/themes/wp_my_theme/css/bootstrap.min.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -30,37 +32,11 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="./css/carousel.css" rel="stylesheet">
+    <link href="/wp-content/themes/wp_my_theme/css/carousel.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
-    <script src="./js/jquery-3.4.1.min.js" ></script>
-    <script>window.jQuery || document.write('<script src=".js/jquery-slim.min.js"><\/script>')</script><script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="/wp-content/themes/wp_my_theme/js/jquery-3.4.1.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="/wp-content/themes/wp_my_theme/js/jquery-slim.min.js"><\/script>')</script><script src="/wp-content/themes/wp_my_theme/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-    <script src="js/SuperSimpleSlider.min.js"></script>
+    <script src="/wp-content/themes/wp_my_theme/js/SuperSimpleSlider.min.js"></script>
   </head>
 
-  <body>
-    <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Carousel</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</header>
