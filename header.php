@@ -11,9 +11,9 @@
     <title>Carousel Template · Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
-
+    <link href="/wp-content/themes/wp_my_theme/css/carousel.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="/wp-content/themes/wp_my_theme/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/wp-content/themes/wp_my_theme/css/normalize.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;

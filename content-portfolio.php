@@ -171,7 +171,7 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
     <hr class="featurette-divider">
     <p class="h1" style="text-align: center;">achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
-<div class="simpleSlider" id="sNr1" style="height: 300px;">
+<div class="simpleSlider" id="sNr1" style="height: 300px; width: 70%;">
 <img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" />
 <img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" alt="sample image 2" />
 <img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" alt="sample image 3" />
