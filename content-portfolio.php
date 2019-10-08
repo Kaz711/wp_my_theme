@@ -184,35 +184,44 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
     <p class="h1" style="text-align: center;">Tiles Blog</p>
     <p style="text-align: center; margin-bottom: 30px;">It is a daily record.</p>
 
+<?php 
+$args = array(
+  'post_type' => 'post',
+  'posts_per_page' => 3,
+);
+$blog_posts = new WP_Query($args);
+if ( $blog_posts->have_posts() ):
+?>
+
 <div class="card-deck">
+
+<?php
+  while ( $blog_posts->have_posts() ) :
+    $blog_posts->the_post();
+?>
   <div class="card">
+<?php
+if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+	the_post_thumbnail();
+}
+?>
     <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h5 class="card-title"><?php the_title(); ?></h5>
+    <p class="card-text"><?php the_content(); ?></p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <p class="card-text"><small class="text-muted"><?php the_time('Y年m月d日'); ?></small></p>
     </div>
   </div>
-  <div class="card">
-    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.This card has supporting text below as a.....</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+<?php
+  endwhile;
+  wp_reset_postdata();
+?>
 </div>
+
+<?php
+endif;
+?>
 <!-- /Card decks & btn -->
 
 <!-- Card decks & btn -->
@@ -227,7 +236,7 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+      <h5 class="card-title"><?php the_title(); ?></h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
          <a href="#" class="btn btn-primary">Go somewhere</a>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
