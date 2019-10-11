@@ -1,0 +1,41 @@
+/* Color CSS
+-------------------------------------------------- */
+/* txt class */
+.text-msc {
+    color: #9f6f55!important;
+}
+
+/* btn class */
+.btn-msc {
+  color: #fff;
+  background-color: #3f312b;
+  border-color: #3f312b;
+}
+
+.btn-msc:hover {
+  color: #fff;
+  background-color: #281a14;
+  border-color: #250d00;
+}
+
+.btn-msc:focus, .btn-msc.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-msc.disabled, .btn-msc:disabled {
+  color: #fff;
+  background-color: #281a14;
+  border-color: #250d00;
+}
+
+.btn-msc:not(:disabled):not(.disabled):active, .btn-msc:not(:disabled):not(.disabled).active,
+.show > .btn-msc.dropdown-toggle {
+  color: #fff;
+  background-color: #281a14;
+  border-color: #250d00;
+}
+
+.btn-msc:not(:disabled):not(.disabled):active:focus, .btn-msc:not(:disabled):not(.disabled).active:focus,
+.show > .btn-msc.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}

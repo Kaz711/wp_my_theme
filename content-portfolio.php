@@ -72,15 +72,15 @@
       <div class="col-md-4 order-md-3">
         <p class="h1">Individuality</p>
       　<ul>
-          <li class="mb-1">協調性<span class="text-info">＃包容力</span></li>
-          <li class="mb-1">心配性<span class="text-info">＃安全運転</span></li> 
-          <li class="mb-1">ドライ<span class="text-info">＃ぼっち力</span></li>
-          <li class="mb-1">計画的<span class="text-info">＃策士</span></li>  
-          <li class="mb-1">察する<span class="text-info">＃センス</span></li>
-          <li class="mb-1">こだわり・工夫好き<span class="text-info">＃発明</span></li> 
-          <li class="mb-1">挑戦好き<span class="text-info">＃実行力</span></li>
-          <li class="mb-1">集中力<span class="text-info">＃ストイック</span></li> 
-          <li>飽き性<span class="text-info">＃好奇心旺盛</span></li>
+          <li class="mb-1">協調性<span class="text-info text-msc">＃包容力</span></li>
+          <li class="mb-1">心配性<span class="text-info text-msc">＃安全運転</span></li> 
+          <li class="mb-1">ドライ<span class="text-info text-msc">＃ぼっち力</span></li>
+          <li class="mb-1">計画的<span class="text-info text-msc">＃策士</span></li>  
+          <li class="mb-1">察する<span class="text-info text-msc">＃センス</span></li>
+          <li class="mb-1">こだわり・工夫好き<span class="text-info text-msc">＃発明</span></li> 
+          <li class="mb-1">挑戦好き<span class="text-info text-msc">＃実行力</span></li>
+          <li class="mb-1">集中力<span class="text-info text-msc">＃ストイック</span></li> 
+          <li>飽き性<span class="text-info text-msc">＃好奇心旺盛</span></li>
         </ul>
         <div>［First impression］<br>Gentle / Seriously / Looks weak</div>
         <div>→ People are different from the appearance...</div>
@@ -110,14 +110,15 @@
         labels:["ブランドサイト","キャンペーンサイト","ショップサイト","アプリ"],
         datasets:[{
           label: "データセット",
-          data:[48,22,25,5]
+          data:[48,22,25,5],
+          backgroundColor:["rgb(37,13,0)","rgb(69,49,43)","rgb(159,111,85)","rgb(165,143,134)"]
         }]
       }
     }
   );
 </script>
         <h2>Business category</h2>
-        <p style="margin-top: 20px;">［Various industries］<br>官公庁／建設業／不動産／遺伝子解析／車／教育教材／病院／IT／EC通販／ファッション／美容健康／飲食</p>
+        <p style="margin-top: 20px;">［Various industries］<br>金融／不動産／IT／自動車／遺伝子解析／人材／教育教材／病院／EC通販／ファッション／美容健康／飲食 ※ゲーム未経験</p>
         <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
       </div>
       <div class="col-lg-4">
@@ -133,12 +134,12 @@
             "label":"スキルセット",
             "data":[40,60,85,15,50],
             "fill":true,
-            "backgroundColor":"rgba(54, 162, 235, 0.2)",
-            "borderColor":"rgb(54, 162, 235)",
-            "pointBackgroundColor":"rgb(54, 162, 235)",
+            "backgroundColor":"rgba(159, 111, 85, 0.7)",
+            "borderColor":"rgb(159, 111, 85)",
+            "pointBackgroundColor":"rgb(159, 111, 85)",
             "pointBorderColor":"#fff",
             "pointHoverBackgroundColor":"#fff",
-            "pointHoverBorderColor":"rgb(54, 162, 235)"
+            "pointHoverBorderColor":"rgb(159, 111, 85)"
           }
         ]
       },
@@ -153,13 +154,16 @@
     });
 </script>
         <h2>work ability</h2>
-        <p style="margin-top: 20px; margin-bottom: -10px;">［Strengthening］<br>DTPからWEBへ転身。デザイナー経歴が長め。企業常駐型WEBディレクター。企画設計・UIUX・プログラミングスキル強化中。</p>
+        <p style="margin-top: 20px; margin-bottom: -10px;">［Strengthening］<br>DTPからWEBへ転身。デザイナー経歴が長めのWEBディレクター。常駐＆リモート。企画設計・UIUX・プログラミングスキル強化中。</p>
         <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
       </div>
     </div>
 <!-- /Three columns of js -->
 
     <hr class="featurette-divider" style="margin-top: 2em;">
+
+    <p class="h1" style="text-align: center;">Career phase</p>
+    <p style="text-align: center; margin-bottom: 30px;">About past and future careers</p>
 
 <!-- SuperSimpleSlider -->
 <script type="text/javascript" >
@@ -172,10 +176,10 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
     <p class="h1" style="text-align: center;">achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
 <div class="simpleSlider" id="sNr1" style="height: 300px; width: 70%;">
-<img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" />
-<img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" alt="sample image 2" />
-<img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" alt="sample image 3" />
-<img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" alt="sample image 4" />
+<a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" /></a>
+<a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" alt="sample image 2" /></a>
+<a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" alt="sample image 3" /></a>
+<a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" alt="sample image 4" /></a>
 </div>
 <!-- /SuperSimpleSlider -->
 
@@ -184,31 +188,72 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
     <p class="h1" style="text-align: center;">Tiles Blog</p>
     <p style="text-align: center; margin-bottom: 30px;">It is a daily record.</p>
 
+<?php 
+$args = array(
+  'post_type' => 'post',
+  'posts_per_page' => 3,
+);
+$blog_posts = new WP_Query($args);
+if ( $blog_posts->have_posts() ):
+?>
+<div class="card-deck">
+<?php
+  while ( $blog_posts->have_posts() ) :
+    $blog_posts->the_post();
+?>
+  <div class="card"><!-- style="border-radius: 0;" 角丸枠解除 -->
+<?php 
+if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+  the_post_thumbnail();
+}
+?>
+    <div class="card-body">
+      <h5 class="card-title"><?php the_title(); ?></h5>
+      <p class="card-text"><?php the_content(); ?></p>
+      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
+      <p class="card-text"><small class="text-muted"><?php the_time('Y年m月d日'); ?></small></p>
+    </div>
+  </div> 
+<?php
+  endwhile;
+  wp_reset_postdata();
+?>
+</div>
+<?php
+endif;
+?>
+<!-- /Card decks & btn -->
+
+<!-- Card decks & btn -->
+    <hr class="featurette-divider">
+    <p class="h1" style="text-align: center;">Tiles Blog</p>
+    <p style="text-align: center; margin-bottom: 30px;">It is a daily record.</p>
+
 <div class="card-deck">
   <div class="card">
-    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" class="rounded" alt="sample image 1" /><!-- class="rounded" 角丸画像 -->
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
-    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" class="rounded" alt="sample image 2" /><!-- class="rounded" 角丸画像 -->
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.This card has supporting text below as a.....</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
-    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" class="rounded" alt="sample image 3" /><!-- class="rounded" 角丸画像 -->
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
@@ -223,43 +268,13 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
 <div class="card mb-3" style="max-width: 1200px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <svg class="bd-placeholder-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
+      <img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" class="rounded" alt="sample image 4" />
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-         <a href="#" class="btn btn-primary">Go somewhere</a>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3" style="max-width: 1200px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <svg class="bd-placeholder-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-         <a href="#" class="btn btn-primary">Go somewhere</a>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3" style="max-width: 1200px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <svg class="bd-placeholder-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-         <a href="#" class="btn btn-primary">Go somewhere</a>
+         <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>

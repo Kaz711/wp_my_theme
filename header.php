@@ -14,6 +14,11 @@
     <link href="/wp-content/themes/wp_my_theme/css/carousel.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="/wp-content/themes/wp_my_theme/css/normalize.css" rel="stylesheet">
+    <link href="/wp-content/themes/wp_my_theme/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Color CSS -->
+    <link href="/wp-content/themes/wp_my_theme/css/ms_color.css" rel="stylesheet">
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -32,7 +37,6 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="/wp-content/themes/wp_my_theme/css/carousel.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
     <script src="/wp-content/themes/wp_my_theme/js/jquery-3.4.1.min.js" ></script>
     <script>window.jQuery || document.write('<script src="/wp-content/themes/wp_my_theme/js/jquery-slim.min.js"><\/script>')</script><script src="/wp-content/themes/wp_my_theme/js/bootstrap.bundle.min.js"></script>
