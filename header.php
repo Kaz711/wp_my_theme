@@ -1,4 +1,4 @@
- <?php wp_head(); ?>
+<?php wp_head(); ?>
 
 <!doctype html>
 <html lang="en">

@@ -48,8 +48,8 @@
     </a>
   </div>
 
-  <!-- ================================================== -->
-  <!-- Profile & Individuality -->
+<!-- ================================================== -->
+<!-- Profile & Individuality -->
 
   <div class="container marketing">
 
