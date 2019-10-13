@@ -55,7 +55,6 @@
 
     <div class="row featurette">
       <div class="col-md-4 order-md-1 mb-4">
-        <!-- <img src="..." alt="image" class="img-thumbnail"> -->
         <img src="/wp-content/themes/wp_my_theme/img/my.jpg" class="img-thumbnail rounded" alt="image" />
       </div>
       <div class="col-md-4 order-md-2 mb-4">
