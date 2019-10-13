@@ -5,7 +5,7 @@
   <p style="text-align: center;">&copy; 2017-2019 Company, Inc. &middot; <a href="#" class="text-msc">Privacy</a> &middot; <a href="#" class="text-msc">Terms</a></p>
 </footer>
 
-<!-- scroll btn -->
+<!-- Scroll btn -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 <div id="page_top"><a href="#"></a></div>
 
