@@ -203,7 +203,7 @@ if ( $blog_posts->have_posts() ):
   <div class="card"><!-- style="border-radius: 0;" 角丸枠解除 -->
 <?php 
 if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
-  the_post_thumbnail();
+  the_post_thumbnail('thumbnail', array('class' => 'rounded');
 }
 ?>
     <div class="card-body">
