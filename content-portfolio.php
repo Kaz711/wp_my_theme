@@ -208,7 +208,15 @@ if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当�
 ?>
     <div class="card-body">
       <h5 class="card-title"><?php the_title(); ?></h5>
-      <p class="card-text"><?php the_content(); ?></p>
+      
+      <p class="card-text"><?php
+if(mb_strlen(the_content(),'UTF-8')>200){
+  $content= str_replace('\n', '', mb_substr(strip_tags(the_content()), 0, 200,'UTF-8'));
+  echo $content.'……';
+}else{
+  echo str_replace('\n', '', strip_tags(the_content()));
+}
+?></p>
       <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
       <p class="card-text"><small class="text-muted"><?php the_time('Y年m月d日'); ?></small></p>
     </div>
