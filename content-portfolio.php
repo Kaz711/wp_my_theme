@@ -175,7 +175,7 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
     <p class="h1" style="text-align: center;">achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
 <div class="simpleSlider" id="sNr1" style="height: 300px; width: 70%;">
-<a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" /></a>
+<a href="http://wp2.localhost/84-2/"><img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" /></a>
 <a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" alt="sample image 2" /></a>
 <a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" alt="sample image 3" /></a>
 <a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" alt="sample image 4" /></a>
@@ -191,6 +191,7 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
 $args = array(
   'post_type' => 'post',
   'posts_per_page' => 3,
+  'offset' => 0,
 );
 $blog_posts = new WP_Query($args);
 if ( $blog_posts->have_posts() ):
@@ -200,7 +201,7 @@ if ( $blog_posts->have_posts() ):
   while ( $blog_posts->have_posts() ) :
     $blog_posts->the_post();
 ?>
-  <div class="card"><!-- style="border-radius: 0;" 角丸枠解除 -->
+  <div class="card" style="border-radius: 0; border-top-width: 0px;"><!-- style="border-radius: 0;" 角丸枠解除 -->
 <?php 
 if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
   the_post_thumbnail();
@@ -210,11 +211,11 @@ if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当�
       <h5 class="card-title"><?php the_title(); ?></h5>
       
       <p class="card-text"><?php
-if(mb_strlen(the_content(),'UTF-8')>200){
-  $content= str_replace('\n', '', mb_substr(strip_tags(the_content()), 0, 200,'UTF-8'));
+if(mb_strlen($post-> post_content,'UTF-8')>60){
+  $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 60,'UTF-8'));
   echo $content.'……';
 }else{
-  echo str_replace('\n', '', strip_tags(the_content()));
+  echo str_replace('\n', '', strip_tags($post-> post_content));
 }
 ?></p>
       <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
@@ -234,59 +235,54 @@ endif;
 <!-- Card decks & btn -->
     <hr class="featurette-divider">
     <p class="h1" style="text-align: center;">Tiles Blog</p>
-    <p style="text-align: center; margin-bottom: 30px;">It is a daily record.</p>
-
-<div class="card-deck">
-  <div class="card">
-    <img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" class="rounded" alt="sample image 1" /><!-- class="rounded" 角丸画像 -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" class="rounded" alt="sample image 2" /><!-- class="rounded" 角丸画像 -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.This card has supporting text below as a.....</p>
-      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" class="rounded" alt="sample image 3" /><!-- class="rounded" 角丸画像 -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content</p>
-      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-<!-- /Card decks & btn -->
-
-<!-- Card decks & btn -->
-    <hr class="featurette-divider">
-    <p class="h1" style="text-align: center;">Tiles Blog</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is my career history.</p>
 
-<div class="card mb-3" style="max-width: 1200px;">
+<?php 
+$args = array(
+  'post_type' => 'post',
+  'posts_per_page' => 3,
+  'offset' => 3,
+);
+$blog_posts = new WP_Query($args);
+if ( $blog_posts->have_posts() ):
+?>
+<?php
+  while ( $blog_posts->have_posts() ) :
+    $blog_posts->the_post();
+?>
+<div class="card mb-3" style="max-width: 1200px; border-radius: 0;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" class="rounded" alt="sample image 4" />
+      <?php 
+if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+  the_post_thumbnail();
+}
+?>
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title"><?php the_title(); ?></h5>
+        <p class="card-text"><?php
+if(mb_strlen($post-> post_content,'UTF-8')>60){
+  $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 60,'UTF-8'));
+  echo $content.'……';
+}else{
+  echo str_replace('\n', '', strip_tags($post-> post_content));
+}
+?></p>
          <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text"><small class="text-muted"><?php the_time('Y年m月d日'); ?></small></p>
       </div>
     </div>
   </div>
 </div>
+<?php
+  endwhile;
+  wp_reset_postdata();
+?>
+<?php
+endif;
+?>
 <!-- /Card decks & btn -->
 
   </div><!-- /.container -->
