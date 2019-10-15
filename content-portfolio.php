@@ -172,7 +172,7 @@ sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.pn
 </script>
 
     <hr class="featurette-divider">
-    <p class="h1" style="text-align: center;">achievements</p>
+    <p class="h1" style="text-align: center;">Achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
 <div class="simpleSlider" id="sNr1" style="height: 300px; width: 70%;">
 <a href="http://wp2.localhost/84-2/"><img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" /></a>
