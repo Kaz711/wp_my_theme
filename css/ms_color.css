@@ -20,7 +20,7 @@
 }
 
 .btn-msc:focus, .btn-msc.focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(40 ,26 ,20 ,0.5);
 }
 
 .btn-msc.disabled, .btn-msc:disabled {
@@ -38,5 +38,5 @@
 
 .btn-msc:not(:disabled):not(.disabled):active:focus, .btn-msc:not(:disabled):not(.disabled).active:focus,
 .show > .btn-msc.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(40 ,26 ,20 ,0.5);
 }

@@ -131,7 +131,7 @@
         "datasets":[
           {
             "label":"スキルセット",
-            "data":[40,60,85,15,50],
+            "data":[40,80,90,30,50],
             "fill":true,
             "backgroundColor":"rgba(159, 111, 85, 0.7)",
             "borderColor":"rgb(159, 111, 85)",
