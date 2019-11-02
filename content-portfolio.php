@@ -1,6 +1,6 @@
 <main role="main">
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel0" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -164,23 +164,131 @@
     <p class="h1" style="text-align: center;">Career phase</p>
     <p style="text-align: center; margin-bottom: 30px;">About past and future careers</p>
 
-<!-- SuperSimpleSlider -->
+<!-- ex
+    <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="https://yahoo.co.jp">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
 <script type="text/javascript" >
 sAutoplayDelay = 4000;
 sArrowLeftUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_left_white.png'; // image url for left arrow
 sArrowRightUrl = '/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.png'; // image url for right arrow
 </script>
+ ex -->
 
     <hr class="featurette-divider">
     <p class="h1" style="text-align: center;">Achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
+
+
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <?php 
+    $args = array(
+      'post_type' => 'page',
+      'posts_per_page' => 4,
+      'offset' => 0,
+    );
+    $i = 0;
+while ($i < $args['posts_per_page']) {
+    ?>
+
+      <li data-target="#myCarousel" data-slide-to="<?php echo($i); ?>" class="active"></li>
+
+         <?php 
+    $i++;  /* 出力される値は、足される前の
+                    $iの値です。
+                    (後置加算) */
+}
+    ?>
+
+    </ol>
+<div class="carousel-inner">
+<?php 
+    $blog_posts = new WP_Query($args);
+    if ( $blog_posts->have_posts() ):
+      $count=1; // ループの前に最初の数字を代入
+    ?>
+    <?php
+      while ( $blog_posts->have_posts() ) :
+        $blog_posts->the_post();
+            if ($count == 1){
+              $active = "active";
+            }else{
+              $active = "";
+            }
+    ?>
+
+      <div class="carousel-item <?php echo $active ?>">
+        <a href="<?php echo get_permalink( get_the_ID(), false ) ?>">
+              <?php 
+if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+  the_post_thumbnail();
+}
+?>
+</a>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <!--<h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
+          </div>
+        </div>
+      </div>
+
+    <?php
+    $count++; endwhile; // 次のループの前に数字を増やす
+      wp_reset_postdata();
+    ?>
+    <?php
+    endif;
+    ?>
+</div>
+    <a class="carousel-control-prev" style="background-color: black;opacity: 0.1;width: 7%;" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" style="width: 100%;height: 20%;background-image: url('/wp-content/themes/wp_my_theme/img/arrows/arrow_left_white.png');background-repeat: no-repeat;background-position: center;" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next"  style="background-color: black;opacity: 0.1;width: 7%;" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" style="width: 100%;height: 20%;background-image: url('/wp-content/themes/wp_my_theme/img/arrows/arrow_right_white.png');background-repeat: no-repeat;background-position: center;" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- /Carousel -->
+
+<!-- SuperSimpleSlider
 <div class="simpleSlider" id="sNr1" style="height: 300px; width: 70%;">
 <a href="http://wp2.localhost/84-2/"><img src="/wp-content/themes/wp_my_theme/img/sampleImg1.jpg" alt="sample image 1" /></a>
 <a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg2.jpg" alt="sample image 2" /></a>
 <a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg3.jpg" alt="sample image 3" /></a>
 <a href="#"><img src="/wp-content/themes/wp_my_theme/img/sampleImg4.jpg" alt="sample image 4" /></a>
 </div>
-<!-- /SuperSimpleSlider -->
+ /SuperSimpleSlider -->
 
 <!-- Card decks & btn -->
     <hr class="featurette-divider">
@@ -218,7 +326,7 @@ if(mb_strlen($post-> post_content,'UTF-8')>60){
   echo str_replace('\n', '', strip_tags($post-> post_content));
 }
 ?></p>
-      <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
+      <a href="<?php echo get_permalink( get_the_ID(), false ) ?>" class="btn btn-primary btn-msc">Go somewhere</a>
       <p class="card-text"><small class="text-muted"><?php the_time('Y年m月d日'); ?></small></p>
     </div>
   </div> 
@@ -270,7 +378,7 @@ if(mb_strlen($post-> post_content,'UTF-8')>60){
   echo str_replace('\n', '', strip_tags($post-> post_content));
 }
 ?></p>
-         <a href="#" class="btn btn-primary btn-msc">Go somewhere</a>
+         <a href="<?php echo get_permalink( get_the_ID(), false ) ?>" class="btn btn-primary btn-msc">Go somewhere</a>
         <p class="card-text"><small class="text-muted"><?php the_time('Y年m月d日'); ?></small></p>
       </div>
     </div>
