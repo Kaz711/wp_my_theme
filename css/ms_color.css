@@ -8,7 +8,7 @@
 
 /* btn class */
 .btn-msc {
-  color: #fff;
+  color: #fff!important;
   background-color: #3f312b;
   border-color: #3f312b;
 }
@@ -39,4 +39,20 @@
 .btn-msc:not(:disabled):not(.disabled):active:focus, .btn-msc:not(:disabled):not(.disabled).active:focus,
 .show > .btn-msc.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(40 ,26 ,20 ,0.5);
+}
+
+/* a */
+a:link { color: #9f6f55; }
+a:visited { color: #9f6f55; }
+a:hover { color: #9f6f55; }
+a:active { color: #9f6f55; }
+
+/* scroll */
+.scroll {
+opacity: 0;
+transition: opacity 1s;
+}
+
+.active {
+opacity: 1 !important;
 }

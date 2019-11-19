@@ -43,5 +43,25 @@
     <script>window.jQuery || document.write('<script src="/wp-content/themes/wp_my_theme/js/jquery-slim.min.js"><\/script>')</script><script src="/wp-content/themes/wp_my_theme/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/wp-content/themes/wp_my_theme/js/SuperSimpleSlider.min.js"></script>
+    <script type="text/javascript">
+$(function(){
+var $scroll = $('.scroll');
+//$section.css('opacity', '0');
+
+$(window).scroll(function(){
+var wh = $(window).height(),
+scrollTop = $(window).scrollTop();
+
+$scroll.each(function(){
+var pos = $(this).offset().top;
+if(scrollTop > pos - wh) {
+$(this).addClass('active');
+}
+});
+
+});
+
+});
+</script>
   </head>
 

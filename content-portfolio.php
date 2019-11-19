@@ -53,6 +53,7 @@
 
   <div class="container marketing">
 
+ <div class="scroll">
     <div class="row featurette">
       <div class="col-md-4 order-md-1 mb-4">
         <img src="/wp-content/themes/wp_my_theme/img/my.jpg" class="img-thumbnail rounded" alt="image" />
@@ -85,7 +86,7 @@
         <div>→ People are different from the appearance...</div>
       </div>    
     </div>
-
+</div>
     <hr class="featurette-divider" style="margin-top: 2em;"> 
 
 <!-- Three columns of js -->
