@@ -2,7 +2,7 @@
 
 <!-- FOOTER -->
 <footer class="container">
-  <p style="text-align: center;">&copy; 2017-2019 Company, Inc. &middot; <a href="#" class="text-msc">Privacy</a> &middot; <a href="#" class="text-msc">Terms</a></p>
+  <p style="text-align: center;">&copy; 2016-2019 oune Co., Ltd. &middot; <a href="#" class="text-msc">Home</a> &middot; <a href="#" class="text-msc">Mail form</a></p>
 </footer>
 
 <!-- Scroll btn -->
